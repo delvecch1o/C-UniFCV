@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+	int notas[5];
+	int i;
+	int soma = 0; 
+	float media = 0; 
+
+	for (i = 0; i < 5; i++) {
+		printf("Digite um numero %d: ", i + 1);
+		scanf("%d", &notas[i]);
+		
+		soma = soma + notas[i];
+	}
+	
+	for (i = 0; i < 5; i++) {
+		printf("o numero %d eh %d\n", i + 1, notas[i]);
+	}
+	
+	media = soma / 5;
+	
+	printf("Media = %.2f", media);
+}
