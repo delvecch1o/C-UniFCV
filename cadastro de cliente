@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct endereco {
+	char rua [50];
+	int numero;
+};
+
+struct cadastro {
+	char nome [50];
+	int idade;
+	struct endereco end;
+};
+
+
+
+ int main (){
+	struct cadastro cad;
+	
+	printf ("Endereco:\n");
+	printf("Nome da rua: ");
+	fgets (cad.end.rua, 50, stdin);
+	cad.end.rua[strlen(cad.end.rua) -1] = '\0';
+	
+	printf ("Numero: ");
+	scanf ("%d", &cad.end.numero);
+	fflush(stdin);
+	
+	printf("Cadastro:\n");
+	printf("Seu nome: ");
+	fgets (cad.nome, 50, stdin);
+	cad.nome[strlen(cad.nome) -1]='\0';
+	
+	printf("Sua idade: ");
+	scanf ("%d", &cad.idade);
+	
+	printf("\n--------------------\n");
+	printf("Cadastro concluido:\n");
+	printf("Voce se chama %s, tem %d anos de idade, mora na rua %s, num %d" ,
+	cad.nome,
+	cad.idade,
+	cad.end.rua,
+	cad.end.numero);
+	
+	return 0;
+}
