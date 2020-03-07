@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+	int notas[6];
+	int i;
+
+	for (i = 0; i < 6; i++) {
+		printf("Digite um numero %d: ", i + 1);
+		scanf("%d", &notas[i]);
+	}
+	
+	for (i = 0; i < 6; i++) {
+		printf("o numero %d eh %d\n", i + 1, notas[i]);
+	}
+}
