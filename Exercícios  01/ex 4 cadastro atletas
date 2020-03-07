@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct cadastro {
+	char nome[50];
+	char esporte[50];
+	int idade;
+	float altura;
+	
+};
+
+    int	main () {
+	struct cadastro c[3];
+	int i;
+		int Maisalto = 0;
+	int Maisvelho = 0;
+	
+	
+	for (i = 0; i < 3; i++){
+    
+	printf("Digite seu nome\n");
+    gets(c[i].nome);
+    fflush(stdin);
+    
+	printf("Digite seu esporte\n");
+    gets(c[i].esporte);
+    fflush(stdin);
+	
+	printf("Digite sua idade\n");
+	scanf("%d",&c[i].idade);
+	fflush(stdin);
+	
+	printf("Digite sua altura\n");
+	scanf("%f",&c[i].altura);
+	fflush(stdin);
+	}
+	for (i = 0; i < 3; i++){
+	if (c[i].idade < c[Maisvelho].idade)
+		Maisvelho = i;
+
+	if(c[i].altura > c[Maisalto].idade)
+	Maisalto = i;
+	}
+	printf("A pessoa mais velha %s \n",c[Maisvelho].nome);
+	printf ("A pessoa mais alta %s \n",c[Maisalto].nome);
+	
+    system("pause");
+	return 0;
+}
