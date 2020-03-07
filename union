@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+union tipo {
+	int x;
+	char c;
+};
+int main () {
+	union tipo t;
+	t.x = 1542;
+	printf("x = %d \n", t.x);
+	printf("c = %d \n", t.c); // imprimiu um lixo de memoria
+	t.c = 68;
+	printf("\nx = %d \n", t.x); // ao compartilhar o mesmo endereco de memoria,o mesmo 
+	printf("c = %d \n", t.c);
+	system("pause");
+	return 0;
+}
