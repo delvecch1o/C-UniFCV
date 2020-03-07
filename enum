@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+enum semana {domingo, segunda, terca, quarta, quinta, sexta, sabado};
+
+int main () {
+	enum semana s1, s2, s3;
+	s1 = segunda;
+	s2 = terca;
+	s3 = s1 + s2 ;
+	printf("Domingo = %d \n", domingo);
+	printf("s1 = %d \n", s1);
+	printf("s2 = %d \n", s2);
+	printf("s3 = %d \n", s3);
+	system ("pause");
+	
+	return 0;
+}
