@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+ int main () {
+	 struct cadastro {
+		 char nome [50];
+		 int idade ;
+		 char rua [50]
+	 };
+	 struct cadastro c;
+	 printf("Digite seu nome\n");
+	 gets (c.nome);
+	 fflush(stdin);
+	 
+	 printf ("Qual a sua idade?\n");
+	 scanf("%d",&c.idade);
+	  fflush(stdin);
+	  
+	  printf("Qual seu endereco ?\n");
+	  gets (c.rua);
+	  fflush(stdin);
+	 
+	  printf("Nome : %s\n", c.nome);
+	  printf("Idade : %d\n", c.idade);
+	  printf("rua : %s\n", c.rua);
+	 system ("pause");
+	  
+	 return 0;
+ } 
