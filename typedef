@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+typedef int inteiro; // e usado como sinonimos 
+
+int main () {
+	int x = 10;
+	inteiro y = 20;
+	y = y + x;
+	printf("Soma = %d\n", y);
+	system ("pause");
+	return 0;
+}
+© 2020 GitHub, Inc.
