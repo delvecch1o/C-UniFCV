@@ -5,14 +5,13 @@ struct ponto {
 	int x,y;
 };
 
-void soma_imprime (int *n){
-	*n = *n + 1;
-	printf("Valor = %d\n", *n);
+void imprime (struct ponto p){
+	printf("x = %d\n",p.x);
+		printf("x = %d\n",p.y);
 }
 int main (){
 	struct ponto p1 = {10,20};
-	soma_imprime(&p1.x);
-	soma_imprime(&p1.y);
+	imprime (p1);
 	system ("pause");
 	return 0;
 }
