@@ -1,19 +1,30 @@
-#include <stdio.h>
 #include <stdlib.h>
-
-struct ponto {
-	int x,y;
+#include <stdio.h>
+ 
+char meses[][32] = {
+    "JANEIRO",
+    "FEVEREIRO",
+    "MARCO",
+    "ABRIL",
+    "MAIO",
+    "JUNHO",
+    "JULHO",
+    "AGOSTO",
+    "SETEMBRO",
+    "OUTUBRO",
+    "NOVEMBRO",
+    "DEZEMBRO",
 };
-
-void atribui (struct ponto *p){
-	(*p).x = 10;
-	(*p).y = 20; }
-
-int main (){
-	struct ponto p1;
-	atribui (&p1);
-	printf("x = %d\n",p1.x);
-	printf("x = %d\n",p1.y);
-	system ("pause");
-	return 0;
+ 
+void qualMes(int mes) {
+    printf("O mês selecionado foi: %d chamado %s\n", mes, meses[mes - 1]);
+}
+ 
+int main() {
+    int numMes;
+ 
+    printf("Digite um número de 1 a 12: ");
+    scanf("%d", &numMes);
+ 
+    qualMes(numMes);
 }
